@@ -23,9 +23,9 @@ export class AppComponent implements OnInit {
       icon: 'information-circle'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Ayuda',
+      url: '/ayuda',
+      icon: 'help-circle'
     }
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

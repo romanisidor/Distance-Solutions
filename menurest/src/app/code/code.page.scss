@@ -1,0 +1,46 @@
+ion-input {
+  box-shadow: -1px -1px 10px -4px rgba(0,0,0,0.35);
+    border-radius: 10px;
+  }
+  
+  .container {
+    
+    height: 500px;
+    width: 500px;
+    
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .img-fix{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .texto1 h1{
+    position: fixed;
+    display: block;
+    left: 50%;
+    top: 45%;
+    color: black;
+    font-weight: 900;
+    font-size: 19px;
+    transform: translate(-50%, -50%);
+    text-align: -webkit-center;
+}
+.but{
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+ion-button{
+  --border-radius: 6px;
+}
