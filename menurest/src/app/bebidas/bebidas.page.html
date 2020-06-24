@@ -1,0 +1,96 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios" style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12);">
+    <div class="menu-top">
+    <ion-buttons slot="start" >
+      <ion-menu-button size="large" color="dark"></ion-menu-button>
+    </ion-buttons>
+  </div>
+  <div class="info-top">
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="help-circle" size="large" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+      <div class="img-logo">
+      <img src="../../assets/logo.svg" height="25px">
+    </div>
+    <div class="bienvenido">
+      <h1 style="font-weight:700">Bebidas</h1>
+    </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <div class="chips" style="margin: auto; text-align: center;">
+        <ion-chip outline color="warning" style="border-width: 3px;padding: 17px;">
+          <ion-icon name="restaurant" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Entradas</ion-label>
+        </ion-chip>
+    
+        <ion-chip outline color="warning"  style="border-width: 3px;padding: 17px;">
+          <ion-icon name="restaurant" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Postres</ion-label>
+        </ion-chip>
+      </div>
+      <ion-searchbar mode="ios"></ion-searchbar>
+      <ion-card mode="ios" *ngFor="let food of foodlist ;let i=index">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6" size-lg="4">
+              <img [src]="food.FOOD" style="   
+    display: inline-block;
+    position: relative;
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 6px;
+    margin-top: 20px;"/>
+            </ion-col>
+            <ion-col size="6" size-lg="4">
+              <h1 
+              style="
+              display: block;
+              position: relative;
+              font-size: 20px;
+              margin: auto;
+              text-align: left;
+              margin-left: -61px;
+              margin-top: 11px;
+              font-weight: 700;
+              color: black;">{{food.NAME}}</h1>
+              <p 
+              style="position: fixed;
+              font-size: 11px;
+              margin-left: -59px;">
+              {{food.DETAILS}}</p>
+           <h1 
+           style="display: inline-block;
+           position: relative;
+    font-size: 21px;
+    margin: auto;
+    text-align: left;
+    margin-left: -60px;
+    margin-top: 63px;
+           font-weight: 700;
+           color: black;">${{food.PRICE}}</h1>
+             <ion-button mode="ios" color="dark" style="
+             display: inline-block;
+             position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin: auto;
+    margin-left: 43px;
+    height: 50px;
+    margin-top: -54px;
+    margin-bottom: -3px;">Pedir</ion-button>
+        </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+</ion-content>
