@@ -6,7 +6,7 @@ function generateComida(){
         var name = faker.commerce.product();
         var details= faker.lorem.words();
         var price= faker.commerce.price();
-        var food= faker.image.food();
+        var food= faker.image.image();
 
         comida.push({
             //organiza la informacion descargada de faker en etiquetas de json

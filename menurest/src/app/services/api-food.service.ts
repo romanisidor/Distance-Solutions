@@ -13,7 +13,7 @@ export class ApiFoodService {
 
   constructor( public http:HttpClient) { }
 
-  GetUsers():Observable<Comida> {
+  GetProductos():Observable<Comida> {
     return this.http.get<Comida>('http://192.168.8.128:3000/comida');
   }
 }

@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar mode="ios" style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12);">
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar mode="ios" style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12);" [translucent]="true">
     <div class="menu-top">
     <ion-buttons slot="start" >
       <ion-menu-button size="large" color="dark"></ion-menu-button>
@@ -24,6 +24,15 @@
 
 <ion-content>
   <br>
+  <ion-fab vertical="top" horizontal="end" slot="fixed" style="margin-top: -39px;right: 27px;" 
+  *ngIf="(contador | async)!==0">
+    <ion-fab-button color="warning" (click)="VerPedido()">
+      <div>
+        <p>{{ contador | async}}</p>
+      </div>
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <div class="chips" style="margin: auto; text-align: center;">
         <ion-chip outline color="warning" style="border-width: 3px;padding: 17px;">
           <ion-icon name="restaurant" style="color: black;"></ion-icon>
@@ -36,10 +45,11 @@
         </ion-chip>
       </div>
       <ion-searchbar mode="ios"></ion-searchbar>
+
       <ion-card mode="ios" *ngFor="let food of foodlist ;let i=index">
         <ion-grid>
-          <ion-row>
-            <ion-col size="6" size-lg="4">
+          <ion-row responsive-md>
+            <ion-col size-lg="3" size-md="4" size-sm="4" size-xs="6">
               <img [src]="food.FOOD" style="   
     display: inline-block;
     position: relative;
@@ -66,10 +76,10 @@
               style="position: fixed;
               font-size: 11px;
               margin-left: -59px;">
-              {{food.DETAILS}}</p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet error voluptatem illo sed </p>
            <h1 
            style="display: inline-block;
-           position: relative;
+           position: fixed;
     font-size: 21px;
     margin: auto;
     text-align: left;
@@ -79,7 +89,7 @@
            color: black;">${{food.PRICE}}</h1>
              <ion-button mode="ios" color="dark" style="
              display: inline-block;
-             position: relative;
+            
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 10px;
@@ -87,10 +97,11 @@
     margin: auto;
     margin-left: 43px;
     height: 50px;
-    margin-top: -54px;
-    margin-bottom: -3px;">Pedir</ion-button>
+    margin-top: 51px;
+    margin-bottom: -3px;" (click)="agregar(food)">Pedir</ion-button>
         </ion-col>
           </ion-row>
         </ion-grid>
       </ion-card>
+    
 </ion-content>
