@@ -1,12 +1,16 @@
 *{
     font-family: "SF Display";
 }
+ion-toolbar {
+    --background: black !important;
+}
 .bienvenido{
     margin: auto;
     margin-top: 115px;
     margin-bottom: 40px;
     margin-left: 53px;
     font-weight: 700;
+    color: white;
     
 }
 .subtitle{
@@ -14,6 +18,7 @@
     margin-top:-35px;
     margin-left: 53px;
     margin-bottom: 30px;
+    color: white;
 }
 .menu-top{
     margin-top:30px;
@@ -45,6 +50,17 @@
     left: 50%;
     color:white;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 14px;
     transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 7px;
+}
+.text-info h1{
+    font-size: 12px;
+    font-weight: 400;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: grey;
 }

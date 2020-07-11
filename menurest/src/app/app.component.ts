@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-root',
@@ -33,7 +35,9 @@ export class AppComponent implements OnInit {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar, 
+    public navCtrl: NavController,
+    private storage: Storage
   ) {
     this.initializeApp();
   }
@@ -43,6 +47,16 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+
+    this.storage.get('storage_xxx').then((res)=>{
+      if (res == null){
+        this.navCtrl.navigateRoot('/code');
+      }else{
+        this.navCtrl.navigateRoot('/home');
+
+      }
+    });
+  
   }
 
   ngOnInit() {

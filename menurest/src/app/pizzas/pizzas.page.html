@@ -1,0 +1,86 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar mode="ios"  style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12); background-color: black;">
+    <div class="menu-top">
+    <ion-buttons slot="start" >
+      <ion-menu-button size="large" color="light"></ion-menu-button>
+    </ion-buttons>
+  </div>
+  <div class="info-top">
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="'/ayuda/'">
+        <ion-icon name="help-circle" size="large" color="light" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+      <div class="img-logo">
+      <img src="../../assets/icon/icon-amore.svg" height="30px" [routerLink]="'/home/'" >
+    </div>
+    <div class="bienvenido">
+      <h1 style="font-weight:700">Pizzas</h1>
+    </div>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br>
+  <ion-fab vertical="top" horizontal="end" slot="fixed" style="margin-top: -39px;right: 27px;" 
+  *ngIf="(contador | async)!==0">
+    <ion-fab-button color="danger" (click)="VerPedido()">
+      <div>
+        <p>{{ contador | async}}</p>
+      </div>
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="chips" style="margin: auto; text-align: center;">
+        <ion-chip outline color="danger" style="border-width: 2px;padding: 17px; border-color: #ff7373;" [routerLink]="'/drinks/'">
+          <ion-icon name="beer" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Bebidas</ion-label>
+        </ion-chip>
+    
+        <ion-chip outline color="danger"  style="border-width: 2px;padding: 17px; border-color: #ff7373;" [routerLink]="'/burger/'">
+          <ion-icon name="restaurant" style="color: black;"></ion-icon>
+          <ion-label style="color: black;">Hamburguesas</ion-label>
+        </ion-chip>
+      </div>
+      <ion-searchbar mode="ios" placeholder="Buscar"></ion-searchbar>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+        <ion-fab-button color="danger" [routerLink]="'/home/'">
+          <ion-icon name="home"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+      <ion-card mode="ios" *ngFor="let food of foodlist">
+        <ion-grid>
+          <ion-row responsive-sm>
+            <ion-col size-lg="4" size-md="4" size-sm="4" size-xs="6">
+              <div class="img-dis">
+              <img [src]="food.IMAGEN"/></div>
+            </ion-col>
+            <ion-col size="6" size-lg="4" size-xs="6">
+              <div class="names">
+              <h1>{{food.NAME}}</h1>
+              <p>
+              {{food.DETAILS}}</p>
+            </div>
+            <div class="prices">
+                <ion-select placeholder="Tamaños">
+                  <ion-select-option value="PRICE">Chi ${{food.PRICE[0]}}</ion-select-option>
+                  <ion-select-option value="PRICE1">Med ${{food.PRICE[1]}}</ion-select-option>
+                  <ion-select-option value="PRICE2">Grd ${{food.PRICE[2]}}</ion-select-option>
+                  <ion-select-option value="PRICE3">Fam ${{food.PRICE[3]}}</ion-select-option>
+                </ion-select>
+            </div>
+           <div class="buts">
+             <ion-button mode="ios" color="dark" size="small" (click)="agregar(food)">Pedir</ion-button>
+            </div>
+        </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+      <div class="text-info">
+        <h1>Las imágenes mostradas son de uso referencial</h1>
+      </div>
+</ion-content>

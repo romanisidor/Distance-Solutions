@@ -1,36 +1,36 @@
 <div class="img-fix">
-<img src="../../assets/logo.svg" alt="" width="110px"> 
-</div>
-<ion-content>
-  <div class="texto1">
-    <h1 >Introduce el
-      código de tu mesa</h1>
-    </div>  
-    <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
-
-  <div class="container">
-
-  <div class="text">
-        <!-- <ion-input class="input-cover" type="password" placeholder="Código de acceso" required></ion-input> -->
-        <input type="password" class="input-cover" name="code" placeholder="Codigo de mesa" ngModel required>
-
-    <!-- Small button icon of eye goes here -->
+  <img src="../../assets/logo.svg" alt="" width="110px"> 
   </div>
-</div>
-   <div class="but">
-  <!-- <ion-button color="dark" mode="ios" (click)="navigate()"> Siguiente</ion-button> -->
-  <p><input type="submit" color="black" value="Continuar"></p>
-</div>
-</form>
-</ion-content>
-
-<!-- <div class="login">
-  <div class="login-triangle"></div>
+  <ion-content>
+    <div class="texto1">
+      <h1 >Introduce el
+        código de tu mesa</h1>
+      </div>  
+      <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
   
-  <h2 class="login-header">Log in</h2>
-
-  <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
-    <p><input type="password" name="code" placeholder="Codigo de mesa" ngModel required></p>
-    <p><input type="submit" value="Continuar"></p>
+    <div class="container">
+  
+    <div class="text">
+          <!-- <ion-input class="input-cover" type="password" placeholder="Código de acceso" required></ion-input> -->
+          <input type="text" class="input-cover" name="code" placeholder="Código de mesa" ngModel required>
+  
+      <!-- Small button icon of eye goes here -->
+    </div>
+  </div>
+    <!-- <ion-button color="dark" mode="ios" (click)="navigate()"> Siguiente</ion-button> -->
+    <p><input type="submit"  class="but" color="black" value="Continuar"></p>
+    
   </form>
-</div> -->
+  </ion-content>
+  
+  <!-- <div class="login">
+    <div class="login-triangle"></div>
+    
+    <h2 class="login-header">Log in</h2>
+  
+    <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
+      <p><input type="password" name="code" placeholder="Codigo de mesa" ngModel required></p>
+      <p><input type="submit" value="Continuar"></p>
+    </form>
+  </div> -->
+  

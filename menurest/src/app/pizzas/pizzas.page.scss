@@ -1,0 +1,202 @@
+*{
+    font-family: "SF Display";
+}
+ion-toolbar {
+    --background: black !important;
+}
+ion-searchbar{
+    --background: rgb(248, 248, 248);
+  }
+  .text-info h1{
+    font-size: 12px;
+    font-weight: 400;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.bienvenido{
+    margin: auto;
+    margin-top: 115px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    
+}
+.subtitle{
+    font-size: 18px;
+    margin-top:-35px;
+    margin-left: 53px;
+    margin-bottom: 30px;
+}
+.menu-top{
+    margin-top:30px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.info-top{
+    margin-top:30px;
+    display: inline-block;
+    margin-right: 20px;
+    float: right;
+}
+.img-logo{
+    margin: auto;
+    text-align: center;
+    margin-top: -33px;
+    margin-bottom: -68px;
+    margin-left: 62px;
+  
+}
+.img-dis img{
+    display: inline-block;
+    position: relative;
+    width: 95px;
+    height: 95px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: 12px;
+}
+.names h1{
+    display: block;
+    position: relative;
+    font-size: 20px;
+    margin: auto;
+    text-align: left;
+    margin-left: -31px;
+    margin-top: 11px;
+    font-weight: 700;
+    color: black;
+}
+.names p {
+    position: absolute;
+    font-size: 11px;
+    margin-left: -31px;
+    margin-top: 2px;
+}
+.prices{
+    position: absolute;
+    margin-left: -52px;
+    margin-top: 30px;
+    font-weight: 700;
+    color: black;
+}
+.buts {
+    display: grid;
+    margin: auto;
+    margin-left: 72px;
+    margin-top: 41px;
+    margin-bottom: 21px;
+    width: 85px;
+    height: 24px;
+}
+@media (min-width: 300px){
+    .buts {
+        display: grid;
+        margin: auto;
+        margin-left: 72px;
+        margin-top: 32px;
+        margin-bottom: 22px;
+        width: 85px;
+        height: 24px;
+    }
+    .img-dis img{
+        margin-top: 10px;
+        width: 90px;
+        height: 90px;
+        margin-left: 1px;
+    }
+    .prices h1{
+        font-size: 15px;
+        margin-top: 42px;
+    }
+}
+@media (min-width: 768px){
+    .img-dis img{
+        display: inline-block;
+        position: relative;
+        width: 140px;
+        height: 140px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+    .names h1{
+        display: block;
+        position: relative;
+        font-size: 30px;
+        margin: auto;
+        text-align: left;
+        margin-left: -31px;
+        margin-top: 11px;
+        font-weight: 700;
+        color: black;
+    }
+    .names p {
+        position: absolute;
+        font-size: 16px;
+        margin-left: -31px;
+        margin-top: 6px;
+    }
+    .prices{
+        margin-left: -52px;
+        margin-top: 59px;
+        font-size: 23px;
+    }
+    .buts {
+        display: grid;
+        margin: auto;
+        margin-left: 149px;
+        margin-top: 64px;
+        margin-bottom: 42px;
+    }
+}
+@media (max-width: 420px){
+    .img-dis img{
+        display: inline-block;
+        position: relative;
+        width: 95px;
+        height: 95px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 20px;
+        margin-top: 12px;}
+    }
+
+@media (max-width: 320px){
+    .img-dis img{
+        display: inline-block;
+        position: relative;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-left: 4px;
+        margin-top: 12px;}
+
+        .buts {
+            margin-left: 70px;
+            width: 15px;
+        }
+    }
+    @media (max-width: 280px){
+        .img-dis img{
+            width: 75px;
+            height: 75px;
+         }
+         .prices h1{
+             font-size: 14px;
+             margin-top: 45px;
+
+         }
+         .names h1{ 
+             font-size: 18px;}
+
+             .buts {
+                 margin-left: 55px;
+                 margin-top: 30px;
+             }
+        }

@@ -52,6 +52,6 @@ export class PedidoService {
     }
   }
   VerPedido(){
-    this.router.navigate(['pedidos']);
+    this.router.navigate(['pages/pedidos']);
   }
 }
