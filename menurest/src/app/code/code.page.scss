@@ -1,6 +1,13 @@
-ion-input {
-  box-shadow: -1px -1px 10px -4px rgba(0,0,0,0.35);
+
+  .input-cover{
+    box-shadow: -1px -1px 10px -4px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    text-align: center;
+    
   }
   
   .container {
@@ -40,6 +47,14 @@ ion-input {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  background-color: black;
+  color: white;
+  padding: 7px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: none;
+  border-radius: 6px;
+  border: none;
 }
 ion-button{
   --border-radius: 6px;

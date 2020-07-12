@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
 });
 app.use(router);
 
- app.listen(propierties.PORT,'192.168.0.92' || 'localhost',function() {
+ app.listen(propierties.PORT,'192.168.8.128' || 'localhost',function() {
    console.log(`Server runing on port ${propierties.PORT}`);
  }
 );

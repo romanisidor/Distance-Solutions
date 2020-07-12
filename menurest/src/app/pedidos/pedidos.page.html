@@ -1,19 +1,19 @@
-<ion-header [translucent]="true" mode="ios">
-  <ion-toolbar mode="ios" style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12);" >
+<ion-header [translucent]="true" color="dark">
+  <ion-toolbar mode="ios" color="dark" style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12);  background-color: black;">
     <div class="menu-top">
     <ion-buttons slot="start" >
-      <ion-menu-button size="large" color="dark"></ion-menu-button>
+      <ion-menu-button size="large" color="light"></ion-menu-button>
     </ion-buttons>
   </div>
   <div class="info-top">
     <ion-buttons slot="primary">
-      <ion-button>
-        <ion-icon name="help-circle" size="large" color="dark"></ion-icon>
+      <ion-button [routerLink]="'/ayuda/'">
+        <ion-icon name="help-circle" size="large" color="light"></ion-icon>
       </ion-button>
     </ion-buttons>
   </div>
       <div class="img-logo">
-      <img src="../../assets/logo.svg" height="25px">
+      <img src="../../assets/icon/icon-amore.svg" height="30px" [routerLink]="'/home/'">
     </div>
     <div class="bienvenido">
       <h1 style="font-weight:700">Pedidos</h1>
@@ -23,33 +23,45 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-fab-button color="danger" [routerLink]="'/home/'">
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-item>
+    <ion-label position="stacked">OBSERVACIONES:</ion-label>
+    <ion-textarea placeholder="indica que no quieres en tu pedido">
+    </ion-textarea>
+  </ion-item>
   <ion-list>
   <ion-item lines="full" *ngFor="let p of pedido" class="ion-text-wrap">
     <ion-grid>
     <ion-row class="ion-align-items-center">
       <ion-col size="2" class="ion-align-self-center">
-        <ion-button color="dark" fill="clear" (click)="disminuir(p)">
+        <ion-button color="warning" fill="clear" (click)="disminuir(p)">
           <ion-icon name="remove-circle" slot="icon-only"></ion-icon>
         </ion-button>
 
       </ion-col>
       <ion-col size="1" class="ion-align-self-center">
-        <p>{{p.amount}}</p>
+        <p style="margin-left: 7px;">{{p.amount}}</p>
       </ion-col>
-  <ion-col size="2" class="ion-align-self-center">
-        <ion-button color="dark" fill="clear" (click)="incrementar(p)">
+  <ion-col size="1" class="ion-align-self-center">
+        <ion-button color="warning" fill="clear" (click)="incrementar(p)">
           <ion-icon name="add-circle" slot="icon-only"></ion-icon>
         </ion-button>
   </ion-col>
 
   <ion-col size="2" offset="5">
-    <ion-button color="dark" fill="clear" (click)="eliminar(p)">
-      <ion-icon name="close-circle" slot="icon-only"></ion-icon>
+    <ion-button color="danger" fill="clear" (click)="eliminar(p)">
+      <ion-icon name="trash" slot="icon-only"></ion-icon>
     </ion-button>
 </ion-col>
 
       <ion-col size="9">
-        <img [src]="p.FOOD" alt="" style="   
+        <img [src]="p.IMAGEN" alt="" style="   
         display: inline-block;
         position: relative; 
         width: 40px;
@@ -62,6 +74,7 @@
         display: inline-block;
         position: fixed;
         margin-left: 15px;">{{ p.NAME }}</b>
+        <p>{{p.SABOR}}</p>
       </ion-col>
       <ion-col size="3" class="ion-text-end">
        <p style="    position: fixed;
@@ -79,13 +92,17 @@
       TOTAL:
     </ion-col>
     <ion-col size="6" class="ion-text-end">
-      {{ getTotal() | currency:'MXN'}}
+      <b>{{ getTotal() | currency:'MXN'}}</b>
     </ion-col>
     
   </ion-row>
 </ion-grid>
   </ion-item>
 </ion-list>
-<ion-button expand="full" color="dark">
-  Realizar pedido</ion-button>
 </ion-content>
+<ion-footer class="ion-no-border" mode="ios">
+    <ion-button expand="full" color="dark" >
+      Realizar pedido</ion-button>
+      <ion-button expand="full" color="danger" >
+        pagar</ion-button>
+</ion-footer>

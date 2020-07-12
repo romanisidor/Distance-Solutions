@@ -81,10 +81,16 @@ ion-toolbar {
     font-size: 17px;
     margin: auto;
     text-align: left;
-    margin-left: -32px;
+    margin-left: 45px;
     margin-top: 49px;
     font-weight: 700;
     color: black;
+}
+.prices h3{
+    position: absolute;
+    font-size: 17px;
+    margin-top: 33px;
+    margin-left: -31px;
 }
 .buts {
     display: grid;
@@ -99,6 +105,7 @@ ion-toolbar {
     display: grid;
     position: absolute;
     margin-left: -51px;
+    font-size:16px
 }
 @media (min-width: 300px){
     .buts {
@@ -117,9 +124,13 @@ ion-toolbar {
         margin-left: 1px;
     }
     .prices h1{
-        font-size: 15px;
+        font-size: 22px;
         margin-top: 42px;
     }
+    .prices h3 {
+        margin-top: 45px;
+    }
+
 }
 @media (min-width: 768px){
     .img-dis img{
@@ -158,13 +169,17 @@ ion-toolbar {
     .prices h1{
         display: inline-block;
         position: fixed;
-        font-size: 30px;
+        font-size: 37px;
         margin: auto;
         text-align: left;
-        margin-left: -32px;
+        margin-left: 70px;
         margin-top: 65px;
         font-weight: 700;
         color: black;
+    }
+    .prices h3 {
+        font-size: 25px;
+        margin-top: 72px;
     }
     .buts {
         display: grid;
