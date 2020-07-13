@@ -73,23 +73,23 @@ ion-toolbar {
     position: absolute;
     font-size: 14px;
     margin-left: -31px;
-    margin-top: 2px;
 }
 .prices h1{
-    display: inline-block;
-    position: fixed;
+    display: block;
+    position: relative;
     font-size: 21px;
     margin: auto;
     text-align: left;
     margin-left: 40px;
-    margin-top: 21px;
+    margin-top: -33px;
+    margin-bottom: -84px;
     font-weight: 700;
     color: black;
 }
 .prices h3{
-    position: absolute;
+    position: relative;
     font-size: 17px;
-    margin-top: 33px;
+    margin-top: 88px;
     margin-left: -31px;
 }
 .buts {
@@ -101,7 +101,20 @@ ion-toolbar {
     width: 85px;
     height: 24px;
 }
-@media (min-width: 300px){
+@media (max-width: 360px){
+    .prices h1{
+        margin-top: -33px;
+        margin-bottom: -76px;
+    }
+    .prices h3 {
+        margin-top: 92px;
+    }
+    .img-dis img {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media (max-width: 300px){
     .buts {
         display: grid;
         margin: auto;
@@ -119,22 +132,31 @@ ion-toolbar {
     }
     .prices h1{
         font-size: 22px;
-        margin-top: 42px;
+        margin-top: -33px;
+        margin-bottom: -71px;
     }
     .prices h3 {
-        margin-top: 45px;
+        margin-top: 80px;
+        margin-bottom: 11px;
+    }
+    .names p {
+        margin-top: 9px;
+        white-space: pre-line;
+        max-width: 94%;
+        overflow: hidden;
+        text-overflow: clip;
     }
 }
 @media (min-width: 768px){
     .img-dis img{
         display: inline-block;
         position: relative;
-        width: 140px;
-        height: 140px;
+        width: 170px;
+        height: 170px;
         overflow: hidden;
         border-radius: 50%;
         margin-left: 20px;
-        margin-top: 12px;
+        margin-top: 19px;
     }
     .names h1{
         display: block;
@@ -152,6 +174,7 @@ ion-toolbar {
         font-size: 22px;
         margin-left: -31px;
         margin-top: 6px;
+        max-width: 110%;
     }
     .prices h1{
         display: inline-block;
@@ -160,13 +183,14 @@ ion-toolbar {
         margin: auto;
         text-align: left;
         margin-left: 70px;
-        margin-top: 65px;
+        margin-top: 67px;
         font-weight: 700;
         color: black;
     }
     .prices h3 {
         font-size: 25px;
-        margin-top: 72px;
+        margin-top: 110px;
+        margin-bottom: -105px;
     }
     .buts {
         display: grid;
@@ -180,24 +204,30 @@ ion-toolbar {
     .img-dis img{
         display: inline-block;
         position: relative;
-        width: 95px;
-        height: 95px;
+        width: 105px;
+        height: 105px;
         overflow: hidden;
         border-radius: 50%;
         margin-left: 20px;
-        margin-top: 12px;}
+        margin-top: 22px;}
     }
 
 @media (max-width: 320px){
     .img-dis img{
         display: inline-block;
         position: relative;
-        width: 85px;
-        height: 85px;
+        width: 90px;
+        height: 90px;
         overflow: hidden;
         border-radius: 50%;
         margin-left: 4px;
-        margin-top: 12px;}
+        margin-top: 31px;}
+        .prices h1 {
+            margin-top: -35px;
+        }
+        .prices h3 {
+            margin-top: 102px;
+        }
     }
     @media (max-width: 290px){
         .img-dis img{
@@ -205,13 +235,23 @@ ion-toolbar {
             height: 75px;
          }
          .prices h1{
-             font-size: 14px;
-             margin-top: 45px;
+            font-size: 17px;
+            margin-top: -30px;
+            margin-bottom: -66px;
 
+         }
+         .prices h3{
+             margin-top: 97px;
          }
          .names h1{ 
              font-size: 18px;}
-
+.names p {
+    margin-top: 9px;
+    white-space: pre-line;
+    max-width: 111%;
+    overflow: hidden;
+    text-overflow: clip;
+}
              .buts {
                  margin-left: 30px;
                  margin-top: 35px;
