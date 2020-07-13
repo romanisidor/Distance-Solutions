@@ -28,7 +28,7 @@ export class HomePage implements OnInit {
   
   ionViewDidEnter(){
     this.storage.get('storage_xxx').then((res)=>{
-      console.log(res);
+
       this.dataStorage = res;
       this.tableName = this.dataStorage.dataUser.name;
     

@@ -1,12 +1,46 @@
 *{
     font-family: "SF Display";
 }
+ion-toolbar {
+    --background: black !important;
+}
+ion-content {
+    --background: #f4f4f4;
+}
+.img-help img{
+    width: 110px;
+    margin: auto;
+    margin-left: 144px;
+    margin-top: 37px;
+    margin-bottom: 20px;
+}
+.titulo h1{
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+    margin-left: 20px;
+}
+.titulo-item h1{
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(83, 83, 83);
+    margin-top: -5px;
+    margin-left: 10px;
+}
+.subtitulo p {
+    display: block;
+    font-size: 9px;
+    color: grey;
+    margin-left: -57px;
+    margin-top: 23px;
+}
 .bienvenido{
     margin: auto;
     margin-top: 115px;
     margin-bottom: 40px;
     text-align: center;
     font-weight: 700;
+    color: white;
     
 }
 .subtitle{

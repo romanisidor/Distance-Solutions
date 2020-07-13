@@ -1,19 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar mode="ios" style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12);">
+<ion-header [translucent]="true" >
+  <ion-toolbar mode="ios"  style="box-shadow: 0px 7px 7px -4px rgba(0,0,0,0.12); background-color: black;">
     <div class="menu-top">
     <ion-buttons slot="start" >
-      <ion-menu-button size="large" color="dark"></ion-menu-button>
+      <ion-menu-button size="large" color="light"></ion-menu-button>
     </ion-buttons>
   </div>
   <div class="info-top">
     <ion-buttons slot="primary">
-      <ion-button>
-        <ion-icon name="help-circle" size="large" color="dark"></ion-icon>
+      <ion-button [routerLink]="'/ayuda/'">
+        <ion-icon name="help-circle" size="large" color="light"></ion-icon>
       </ion-button>
     </ion-buttons>
   </div>
       <div class="img-logo">
-      <img src="../../assets/logo.svg" height="25px">
+      <img src="../../assets/icon/icon-amore.svg" height="30px" [routerLink]="'/home/'">
     </div>
     <div class="bienvenido">
       <h1 style="font-weight:700">Información</h1>
@@ -23,5 +23,64 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <div class="img-help">
+    <img src="../../assets/icon/icon-amore.svg" alt="">
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-fab-button color="danger" [routerLink]="'/home/'">
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div class="titulo">
+    <h1>SIGUENOS</h1>
+  </div>
+  <ion-list>
+    <ion-item  mode="ios" detail href="https://www.facebook.com/Amore-M%C3%ADo-Pizzeria-409240686357080/">
+      <ion-buttons slot="start">
+        <ion-icon name="logo-facebook" style="color: gray;"></ion-icon>
+      </ion-buttons>
+      <div class="titulo-item">
+      <h1>Facebook</h1>
+    </div>
+      <div class="subtitulo">
+      <p>Amore Mío Pizzeria</p>
+    </div>
+    </ion-item>
+    <ion-item  mode="ios" detail href="https://www.instagram.com/amore_miopizzeria/">
+      <ion-buttons slot="start">
+        <ion-icon name="logo-instagram" style="color: gray;"></ion-icon>
+      </ion-buttons>
+      <div class="titulo-item">
+        <h1>Instagram</h1>
+      </div>
+        <div class="subtitulo">
+        <p>@amore_miopizzeria</p>
+      </div>
+    </ion-item>
+    <ion-item  mode="ios" detail href="tel:+527551338285">
+      <ion-buttons slot="start">
+        <ion-icon name="call" style="color: gray;"></ion-icon>
+      </ion-buttons>
+      <div class="titulo-item">
+        <h1>Teléfono</h1>
+      </div>
+        <div class="subtitulo">
+        <p>  &nbsp;  &nbsp; 755 133 82 85</p>
+      </div>
+    </ion-item>
+
+    <ion-item  mode="ios" detail href="mailto: amoremiopizzeria@outlook.es">
+      <ion-buttons slot="start">
+        <ion-icon name="mail" style="color: gray;"></ion-icon>
+      </ion-buttons>
+      <div class="titulo-item">
+        <h1>Email</h1>
+      </div>
+        <div class="subtitulo">
+        <p style="margin-left: -32px;">amoremiopizzeria@outlook.es</p>
+      </div>
+    </ion-item>
+ 
+  </ion-list>
+ 
 </ion-content>
