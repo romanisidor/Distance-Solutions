@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { User } from '../controllers/user';
-import { ToastController, LoadingController, AlertController, NavController } from '@ionic/angular';
+import { ToastController, LoadingController, AlertController, NavController, Platform } from '@ionic/angular';
 import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'app-code',
@@ -18,7 +19,11 @@ export class CodePage implements OnInit {
   	private loadingCtrl: LoadingController,
   	private alertCtrl: AlertController,
     public navCtrl: NavController,
-    private storage: Storage) { }
+    private storage: Storage,
+    public platform: Platform,
+                      ) { 
+      
+    }
 
   ngOnInit() {
   }
@@ -29,17 +34,29 @@ export class CodePage implements OnInit {
   
 
   onLogin(form):void{
-
     if(form.value.code==""){
       this.presentToast('Debe ingresar un codigo');
   }else{
       this.disabledButton = true;
        JSON.stringify(form.value);
+       this.platform.ready().then(()=>{
+        this.loadingCtrl.create({
+          message: "Por favor, espere un momento..."
+        }).then((loadingElement)=>{
+          loadingElement.present();
+          var ref = this;
+          setTimeout(function(){
+            ref.loadingCtrl.dismiss();
+          }, 8000)
+        })
+      })
        this.auth.login(form.value).subscribe(res => {
       this.presentToast("Acceso exitoso");
       this.storage.set('storage_xxx', res)
       this.navCtrl.navigateRoot(['/home']);
+     
       })
+      
   } 
   
 

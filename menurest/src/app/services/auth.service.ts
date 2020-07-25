@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../controllers/user';
 import { Response } from '../controllers/response';
 import {tap} from 'rxjs/operators';
-import {Observable, BehaviorSubject } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import {Observable, BehaviorSubject, throwError } from 'rxjs';
 export const TOKEN_SESSION = 'auth-token';
 export const authdata = "auth-data";
 

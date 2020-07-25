@@ -28,6 +28,8 @@ export class BurgerPage implements OnInit {
   agregar(foodlist){
     this.PedidoService.addPedido(foodlist);
   }
+
+
   VerPedido(){
     this.PedidoService.VerPedido();
   }

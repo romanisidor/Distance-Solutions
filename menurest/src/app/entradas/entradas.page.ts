@@ -11,6 +11,7 @@ import {BehaviorSubject} from 'rxjs';
 })
 export class EntradasPage implements OnInit {
 
+  contentLoaded =false;
   pedido = [];
   foodlist: Pasta;
   contador : BehaviorSubject<number>;
@@ -21,6 +22,9 @@ export class EntradasPage implements OnInit {
     this.ApiFoodService.GetEntradas().subscribe( (data) =>{
       this.foodlist = data
     });
+    setTimeout(() => {
+      this.contentLoaded = true;
+    }, 5000);
     this.pedido = this.PedidoService.getPedido();
     this.contador = this.PedidoService.getContador();
   }
@@ -30,4 +34,7 @@ export class EntradasPage implements OnInit {
   VerPedido(){
     this.PedidoService.VerPedido();
   }
+
+
 }
+
